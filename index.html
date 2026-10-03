@@ -134,7 +134,7 @@
   <div class="card">
     <h2>金利シナリオ（年目 → 適用金利%）</h2>
     <div class="scenarios" id="scenarioBoxes"></div>
-    <p class="note" style="margin-top:12px;">各シナリオの行は自由に追加・編集・削除できます。「基準金利から自動生成」で現在の金利をもとにした叩き台を作れます。</p>
+    <p class="note" style="margin-top:12px;">各シナリオの行は自由に追加・編集・削除できます。基本情報の「現在の適用金利」を変更しても、ここには自動では反映されません。「基準金利から自動生成」を押すと、現在の適用金利をもとにしたシナリオに作り直せます（編集内容は上書きされます）。</p>
   </div>
 
   <button class="run-btn" id="runBtn">シミュレーションを実行</button>
@@ -475,7 +475,6 @@ function drawChart(results){
   `;
 }
 
-document.getElementById('baseRate').addEventListener('change', initScenarios);
 initScenarios();
 </script>
 </body>
